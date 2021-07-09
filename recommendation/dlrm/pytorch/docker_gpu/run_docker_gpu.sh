@@ -1,9 +1,14 @@
 #!/bin/bash
 
-HOST_MLCOMMONS_ROOT_DIR=$HOME/mlcommons/inference	# path to mlcommons/inference
-DLRM_DIR=$HOME/mlcommons/dlrm				# path to DLRM	
-MODEL_DIR=$HOME/mlcommons/model-kaggle		# path to model folder
-DATA_DIR=$HOME/mlcommons/data-kaggle			# path to data folder
+#HOST_MLCOMMONS_ROOT_DIR=$HOME/mlcommons/inference	# path to mlcommons/inference
+#DLRM_DIR=$HOME/mlcommons/dlrm				# path to DLRM	
+#MODEL_DIR=$HOME/mlcommons/model-kaggle		# path to model folder
+#DATA_DIR=$HOME/mlcommons/data-kaggle			# path to data folder
+
+HOST_MLCOMMONS_ROOT_DIR=$MLCOMMONS/inference
+DLRM_DIR=$DLRM_DIR
+MODEL_DIR=$MODEL_DIR
+DATA_DIR=$DATA_DIR
 
 docker run --gpus all -it \
 -v $DLRM_DIR:/root/dlrm \
