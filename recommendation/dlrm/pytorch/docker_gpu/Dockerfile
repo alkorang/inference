@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
+FROM nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
 
 ENV PYTHON_VERSION=3.8
 ENV LANG C.UTF-8
@@ -37,6 +37,7 @@ RUN pip install --upgrade pip && \
     cp /usr/lib/x86_64-linux-gnu/libnccl* /usr/local/cuda/lib && \
     ldconfig
 
+RUN conda install cudatoolkit=11.1 -c nvidia
 RUN conda install pytorch torchvision -c pytorch
 RUN pip install tensorflow-gpu==2.4 onnxruntime-gpu
 RUN pip install tensorboard
